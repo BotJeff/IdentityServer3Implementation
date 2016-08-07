@@ -1,0 +1,12 @@
+C:\TFS\IdentityServer3\IdentityServer3\IdSrv3 Data Migration\obj\Debug\IdSrv3DataMigration.csprojResolveAssemblyReference.cache
+C:\TFS\IdentityServer3\IdentityServer3\IdSrv3 Data Migration\obj\Debug\IdSrv3 Data Migration.exe
+C:\TFS\IdentityServer3\IdentityServer3\IdSrv3 Data Migration\obj\Debug\IdSrv3 Data Migration.pdb
+C:\TFS\IdentityServer3\IdentityServer3\IdSrv3 Data Migration\bin\Debug\IdSrv3 Data Migration.exe.config
+C:\TFS\IdentityServer3\IdentityServer3\IdSrv3 Data Migration\bin\Debug\IdSrv3 Data Migration.exe
+C:\TFS\IdentityServer3\IdentityServer3\IdSrv3 Data Migration\bin\Debug\IdSrv3 Data Migration.pdb
+C:\TFS\IdentityServer3\IdentityServer3\IdSrv3 Data Migration\bin\Debug\BrockAllen.MembershipReboot.dll
+C:\TFS\IdentityServer3\IdentityServer3\IdSrv3 Data Migration\bin\Debug\EntityFramework.dll
+C:\TFS\IdentityServer3\IdentityServer3\IdSrv3 Data Migration\bin\Debug\EntityFramework.SqlServer.dll
+C:\TFS\IdentityServer3\IdentityServer3\IdSrv3 Data Migration\bin\Debug\BrockAllen.MembershipReboot.pdb
+C:\TFS\IdentityServer3\IdentityServer3\IdSrv3 Data Migration\bin\Debug\EntityFramework.xml
+C:\TFS\IdentityServer3\IdentityServer3\IdSrv3 Data Migration\bin\Debug\EntityFramework.SqlServer.xml

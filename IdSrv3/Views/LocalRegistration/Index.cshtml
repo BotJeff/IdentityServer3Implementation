@@ -1,0 +1,59 @@
+﻿@model IdSrv3.Models.LocalRegistrationModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<hr />
+<h2>Register</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    if (ViewData.ModelState["Password"] != null 
+        && ViewData.ModelState["Password"].Errors
+                   .Any(x => x.ErrorMessage == "Password must meet requirements."))
+    {
+        <div class="passwordRequirements">
+            <h4>Password Requirements</h4>
+            <ul>
+                <li>1 or more uppercase letters</li>
+                <li>1 or more numbers</li>
+                <li>8 minimum characters</li>
+                <li>No special characters</li>
+            </ul>
+        </div>
+    }
+    else
+    {
+        <div class="passwordRequirements"></div>
+    }
+
+    <div class="form-group">
+        <label for="User Name">User Name</label>
+        @Html.TextBoxFor(x => x.Username, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="Password">Password</label>
+        @Html.PasswordFor(x => x.Password, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="Confirm Password">Confirm Password</label>
+        @Html.PasswordFor(x => x.ConfirmPassword, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="First">First Name</label>
+        @Html.TextBoxFor(x => x.First, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="Last">Last Name</label>
+        @Html.TextBoxFor(x => x.Last, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="Email">Email</label>
+        @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary">Register</button>
+    </div>
+}

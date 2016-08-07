@@ -1,0 +1,12 @@
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\build\BrockAllen.MembershipReboot.WebHost.dll
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\build\BrockAllen.MembershipReboot.WebHost.pdb
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\src\BrockAllen.MembershipReboot.WebHost\obj\Debug\BrockAllen.MembershipReboot.WebHost.csprojResolveAssemblyReference.cache
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\src\BrockAllen.MembershipReboot.WebHost\obj\Debug\BrockAllen.MembershipReboot.WebHost.dll
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\src\BrockAllen.MembershipReboot.WebHost\obj\Debug\BrockAllen.MembershipReboot.WebHost.pdb
+C:\Git\IdentityServer3\build\BrockAllen.MembershipReboot.WebHost.dll
+C:\Git\IdentityServer3\build\BrockAllen.MembershipReboot.WebHost.pdb
+C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot.WebHost\obj\Debug\BrockAllen.MembershipReboot.WebHost.csprojResolveAssemblyReference.cache
+C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot.WebHost\obj\Debug\BrockAllen.MembershipReboot.WebHost.dll
+C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot.WebHost\obj\Debug\BrockAllen.MembershipReboot.WebHost.pdb
+C:\Git\IdentityServer3\build\BrockAllen.MembershipReboot.WebHost.dll.CodeAnalysisLog.xml
+C:\Git\IdentityServer3\build\BrockAllen.MembershipReboot.WebHost.dll.lastcodeanalysissucceeded

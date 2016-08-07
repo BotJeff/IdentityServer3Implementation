@@ -1,0 +1,17 @@
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\src\BrockAllen.MembershipReboot.Test\bin\Debug\BrockAllen.MembershipReboot.Test.dll
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\src\BrockAllen.MembershipReboot.Test\bin\Debug\BrockAllen.MembershipReboot.Test.pdb
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\src\BrockAllen.MembershipReboot.Test\bin\Debug\BrockAllen.MembershipReboot.dll
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\src\BrockAllen.MembershipReboot.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\src\BrockAllen.MembershipReboot.Test\bin\Debug\BrockAllen.MembershipReboot.pdb
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\src\BrockAllen.MembershipReboot.Test\bin\Debug\da\BrockAllen.MembershipReboot.resources.dll
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\src\BrockAllen.MembershipReboot.Test\bin\Debug\de\BrockAllen.MembershipReboot.resources.dll
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\src\BrockAllen.MembershipReboot.Test\bin\Debug\fi\BrockAllen.MembershipReboot.resources.dll
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\src\BrockAllen.MembershipReboot.Test\bin\Debug\fr\BrockAllen.MembershipReboot.resources.dll
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\src\BrockAllen.MembershipReboot.Test\bin\Debug\nl-nl\BrockAllen.MembershipReboot.resources.dll
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\src\BrockAllen.MembershipReboot.Test\bin\Debug\no\BrockAllen.MembershipReboot.resources.dll
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\src\BrockAllen.MembershipReboot.Test\bin\Debug\ru-ru\BrockAllen.MembershipReboot.resources.dll
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\src\BrockAllen.MembershipReboot.Test\bin\Debug\sv\BrockAllen.MembershipReboot.resources.dll
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\src\BrockAllen.MembershipReboot.Test\bin\Debug\zh-cn\BrockAllen.MembershipReboot.resources.dll
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\src\BrockAllen.MembershipReboot.Test\obj\Debug\BrockAllen.MembershipReboot.Test.csprojResolveAssemblyReference.cache
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\src\BrockAllen.MembershipReboot.Test\obj\Debug\BrockAllen.MembershipReboot.Test.dll
+C:\Users\jeffreyf\Desktop\oscid_project\BrockAllen.MembershipReboot-master\src\BrockAllen.MembershipReboot.Test\obj\Debug\BrockAllen.MembershipReboot.Test.pdb

@@ -1,0 +1,43 @@
+﻿@model IdSrv3.Models.PasswordResetWithKeyModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<hr />
+<h2>Password Reset</h2>
+
+@using(Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    if(ViewData.ModelState["NewPassword"] != null
+        && ViewData.ModelState["NewPassword"].Errors
+                   .Any(x => x.ErrorMessage == "Password must meet requirements."))
+    {
+        <div class="passwordRequirements">
+            <h4>Password Requirements</h4>
+            <ul>
+                <li>1 or more uppercase letters</li>
+                <li>1 or more numbers</li>
+                <li>8 minimum characters</li>
+                <li>No special characters</li>
+            </ul>
+        </div>
+    }
+    else
+    {
+        <div class="passwordRequirements"></div>
+    }
+    <div class="form-group">
+        <label for="New Password">New Password</label>
+        @Html.PasswordFor(x => x.NewPassword, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="Confirm New Password">Confirm New Password</label>
+        @Html.PasswordFor(x => x.ConfirmNewPassword, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary">Submit</button>
+    </div>
+}
