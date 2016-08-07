@@ -17,5 +17,3 @@ C:\Git\IdentityServer3\IdSrv3DataMigrationTool\bin\Debug\EntityFramework.xml
 C:\Git\IdentityServer3\IdSrv3DataMigrationTool\bin\Debug\EntityFramework.SqlServer.xml
 C:\Git\IdentityServer3\IdSrv3DataMigrationTool\obj\Debug\IdSrv3DataMigrationTool.exe
 C:\Git\IdentityServer3\IdSrv3DataMigrationTool\obj\Debug\IdSrv3DataMigrationTool.pdb
-C:\Git\IdentityServer3\IdSrv3DataMigrationTool\bin\Debug\IdSrv3DataMigrationTool.exe.CodeAnalysisLog.xml
-C:\Git\IdentityServer3\IdSrv3DataMigrationTool\bin\Debug\IdSrv3DataMigrationTool.exe.lastcodeanalysissucceeded

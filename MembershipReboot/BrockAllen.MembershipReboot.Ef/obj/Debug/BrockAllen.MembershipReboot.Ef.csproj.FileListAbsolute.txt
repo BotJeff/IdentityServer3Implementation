@@ -18,5 +18,3 @@ C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot.Ef\obj\Debug
 C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot.Ef\obj\Debug\BrockAllen.MembershipReboot.Ef.csproj.GenerateResource.Cache
 C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot.Ef\obj\Debug\BrockAllen.MembershipReboot.Ef.dll
 C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot.Ef\obj\Debug\BrockAllen.MembershipReboot.Ef.pdb
-C:\Git\IdentityServer3\build\BrockAllen.MembershipReboot.Ef.dll.CodeAnalysisLog.xml
-C:\Git\IdentityServer3\build\BrockAllen.MembershipReboot.Ef.dll.lastcodeanalysissucceeded

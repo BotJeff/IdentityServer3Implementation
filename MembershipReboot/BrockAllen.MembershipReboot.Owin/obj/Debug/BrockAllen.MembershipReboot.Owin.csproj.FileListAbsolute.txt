@@ -10,5 +10,3 @@ C:\Git\IdentityServer3\build\BrockAllen.MembershipReboot.Owin.pdb
 C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot.Owin\obj\Debug\BrockAllen.MembershipReboot.Owin.csprojResolveAssemblyReference.cache
 C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot.Owin\obj\Debug\BrockAllen.MembershipReboot.Owin.dll
 C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot.Owin\obj\Debug\BrockAllen.MembershipReboot.Owin.pdb
-C:\Git\IdentityServer3\build\BrockAllen.MembershipReboot.Owin.dll.CodeAnalysisLog.xml
-C:\Git\IdentityServer3\build\BrockAllen.MembershipReboot.Owin.dll.lastcodeanalysissucceeded

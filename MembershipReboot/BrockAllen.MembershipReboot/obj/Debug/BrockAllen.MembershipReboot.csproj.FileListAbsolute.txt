@@ -67,5 +67,4 @@ C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot\obj\Debug\sv
 C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot\obj\Debug\zh-cn\BrockAllen.MembershipReboot.resources.dll
 C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot\obj\Debug\BrockAllen.MembershipReboot.dll
 C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot\obj\Debug\BrockAllen.MembershipReboot.pdb
-C:\Git\IdentityServer3\build\BrockAllen.MembershipReboot.dll.CodeAnalysisLog.xml
-C:\Git\IdentityServer3\build\BrockAllen.MembershipReboot.dll.lastcodeanalysissucceeded
+C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot\obj\Debug\BrockAllen.MembershipReboot.csprojResolveAssemblyReference.cache
