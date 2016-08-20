@@ -18,3 +18,13 @@ C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot.Ef\obj\Debug
 C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot.Ef\obj\Debug\BrockAllen.MembershipReboot.Ef.csproj.GenerateResource.Cache
 C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot.Ef\obj\Debug\BrockAllen.MembershipReboot.Ef.dll
 C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot.Ef\obj\Debug\BrockAllen.MembershipReboot.Ef.pdb
+C:\Git\IdentityServer3Implementation\build\BrockAllen.MembershipReboot.Ef.dll.config
+C:\Git\IdentityServer3Implementation\build\BrockAllen.MembershipReboot.Ef.dll
+C:\Git\IdentityServer3Implementation\build\BrockAllen.MembershipReboot.Ef.pdb
+C:\Git\IdentityServer3Implementation\MembershipReboot\BrockAllen.MembershipReboot.Ef\obj\Debug\BrockAllen.MembershipReboot.Ef.csprojResolveAssemblyReference.cache
+C:\Git\IdentityServer3Implementation\MembershipReboot\BrockAllen.MembershipReboot.Ef\obj\Debug\BrockAllen.MembershipReboot.Ef.Migrations.v7_InitialCreate.resources
+C:\Git\IdentityServer3Implementation\MembershipReboot\BrockAllen.MembershipReboot.Ef\obj\Debug\BrockAllen.MembershipReboot.Ef.Migrations.v7_Indexes.resources
+C:\Git\IdentityServer3Implementation\MembershipReboot\BrockAllen.MembershipReboot.Ef\obj\Debug\BrockAllen.MembershipReboot.Ef.Migrations.v7_PhantomIndexes.resources
+C:\Git\IdentityServer3Implementation\MembershipReboot\BrockAllen.MembershipReboot.Ef\obj\Debug\BrockAllen.MembershipReboot.Ef.csproj.GenerateResource.Cache
+C:\Git\IdentityServer3Implementation\MembershipReboot\BrockAllen.MembershipReboot.Ef\obj\Debug\BrockAllen.MembershipReboot.Ef.dll
+C:\Git\IdentityServer3Implementation\MembershipReboot\BrockAllen.MembershipReboot.Ef\obj\Debug\BrockAllen.MembershipReboot.Ef.pdb

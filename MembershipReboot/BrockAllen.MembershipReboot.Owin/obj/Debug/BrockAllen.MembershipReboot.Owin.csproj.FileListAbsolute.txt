@@ -10,3 +10,9 @@ C:\Git\IdentityServer3\build\BrockAllen.MembershipReboot.Owin.pdb
 C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot.Owin\obj\Debug\BrockAllen.MembershipReboot.Owin.csprojResolveAssemblyReference.cache
 C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot.Owin\obj\Debug\BrockAllen.MembershipReboot.Owin.dll
 C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot.Owin\obj\Debug\BrockAllen.MembershipReboot.Owin.pdb
+C:\Git\IdentityServer3Implementation\build\BrockAllen.MembershipReboot.Owin.dll.config
+C:\Git\IdentityServer3Implementation\build\BrockAllen.MembershipReboot.Owin.dll
+C:\Git\IdentityServer3Implementation\build\BrockAllen.MembershipReboot.Owin.pdb
+C:\Git\IdentityServer3Implementation\MembershipReboot\BrockAllen.MembershipReboot.Owin\obj\Debug\BrockAllen.MembershipReboot.Owin.csprojResolveAssemblyReference.cache
+C:\Git\IdentityServer3Implementation\MembershipReboot\BrockAllen.MembershipReboot.Owin\obj\Debug\BrockAllen.MembershipReboot.Owin.dll
+C:\Git\IdentityServer3Implementation\MembershipReboot\BrockAllen.MembershipReboot.Owin\obj\Debug\BrockAllen.MembershipReboot.Owin.pdb

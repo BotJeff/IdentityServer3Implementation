@@ -8,3 +8,8 @@ C:\Git\IdentityServer3\build\BrockAllen.MembershipReboot.WebHost.pdb
 C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot.WebHost\obj\Debug\BrockAllen.MembershipReboot.WebHost.csprojResolveAssemblyReference.cache
 C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot.WebHost\obj\Debug\BrockAllen.MembershipReboot.WebHost.dll
 C:\Git\IdentityServer3\MembershipReboot\BrockAllen.MembershipReboot.WebHost\obj\Debug\BrockAllen.MembershipReboot.WebHost.pdb
+C:\Git\IdentityServer3Implementation\build\BrockAllen.MembershipReboot.WebHost.dll
+C:\Git\IdentityServer3Implementation\build\BrockAllen.MembershipReboot.WebHost.pdb
+C:\Git\IdentityServer3Implementation\MembershipReboot\BrockAllen.MembershipReboot.WebHost\obj\Debug\BrockAllen.MembershipReboot.WebHost.csprojResolveAssemblyReference.cache
+C:\Git\IdentityServer3Implementation\MembershipReboot\BrockAllen.MembershipReboot.WebHost\obj\Debug\BrockAllen.MembershipReboot.WebHost.dll
+C:\Git\IdentityServer3Implementation\MembershipReboot\BrockAllen.MembershipReboot.WebHost\obj\Debug\BrockAllen.MembershipReboot.WebHost.pdb
