@@ -175,6 +175,7 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -259,13 +260,14 @@
     <Compile Include="Attributes\EmailAddressNotFound.cs" />
     <Compile Include="Attributes\UniqueUsername.cs" />
     <Compile Include="Attributes\UsernameNotFound.cs" />
-    <Compile Include="Controllers\LocalPasswordResetController.cs" />
-    <Compile Include="Controllers\PasswordResetWithKeyController.cs" />
+    <Compile Include="Controllers\PasswordResetController.cs" />
     <Compile Include="Crypto\IdSrv2Crypto\CryptoHelper.cs" />
     <Compile Include="Crypto\IdSrv2Crypto\X509Certificates.cs" />
     <Compile Include="Crypto\IdSrv3Crypto\DefaultCrypto.cs" />
     <Compile Include="Crypto\IdSrv3Crypto\ICrypto.cs" />
     <Compile Include="Crypto\IdSrv3Crypto\System.Web.Helpers.Crypto.cs" />
+    <Compile Include="Email\EmailNotificationTemplateMethod.cs" />
+    <Compile Include="Email\RegisteredUserEmailNotification.cs" />
     <Compile Include="Entities\Client.cs">
       <DependentUpon>IdentityServerEntities.tt</DependentUpon>
     </Compile>
@@ -296,7 +298,7 @@
     <Compile Include="Entities\Consent.cs">
       <DependentUpon>IdentityServerEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\LocalRegistrationController.cs" />
+    <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Entities\C__MigrationHistory.cs">
       <DependentUpon>IdentityServerEntities.tt</DependentUpon>
     </Compile>
@@ -326,9 +328,9 @@
       <DependentUpon>IdentityServerEntities.edmx</DependentUpon>
     </Compile>
     <Compile Include="IdentityServer\Clients.cs" />
-    <Compile Include="IdentityServer\CustomUserService.cs" />
+    <Compile Include="MembershipReboot\UserService\CustomUserService.cs" />
     <Compile Include="IdentityServer\Factory.cs" />
-    <Compile Include="IdentityServer\LocalRegistrationUserService.cs" />
+    <Compile Include="MembershipReboot\Registration\RegistrationUserService.cs" />
     <Compile Include="MembershipReboot\Registration\IRegisterUser.cs" />
     <Compile Include="MembershipReboot\Registration\RegisterUser.cs" />
     <Compile Include="IdentityServer\Scopes.cs" />
@@ -353,6 +355,7 @@
     <Compile Include="MembershipReboot\CustomUsers\CustomUserAccountService.cs" />
     <Compile Include="MembershipReboot\CustomUsers\CustomUserRepository.cs" />
     <Compile Include="App_Start\MembershipRebootConfig.cs" />
+    <Compile Include="Models\AspNetApplicationInformation.cs" />
     <Compile Include="Models\PasswordResetWithKeyModel.cs" />
     <Compile Include="Models\LocalRegistrationModel.cs" />
     <Compile Include="Entities\PasswordResetSecret.cs">
@@ -480,6 +483,8 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="Email\EmailTemplates\RegisteredUserEmailNotification_Body.txt" />
+    <Content Include="Email\EmailTemplates\RegisteredUserEmailNotification_Subject.txt" />
     <Content Include="Entities\IdentityServerEntities.edmx.sql" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -539,6 +544,8 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Templates\_layout.html" />
+    <Content Include="Templates\_login.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -555,12 +562,12 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\LocalRegistration\Index.cshtml" />
+    <Content Include="Views\Registration\Registration.cshtml" />
     <Content Include="Views\Shared\_Banner.cshtml" />
-    <Content Include="Views\LocalPasswordReset\Index.cshtml" />
-    <Content Include="Views\PasswordResetWithKey\Index.cshtml" />
-    <Content Include="Views\LocalPasswordReset\EmailSentMessage.cshtml" />
-    <Content Include="Views\LocalPasswordReset\Success.cshtml" />
+    <Content Include="Views\PasswordReset\EmailSentMessage.cshtml" />
+    <Content Include="Views\PasswordReset\CancelVerification.cshtml" />
+    <Content Include="Views\PasswordReset\PasswordResetWithKey.cshtml" />
+    <Content Include="Views\PasswordReset\RequestPasswordReset.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

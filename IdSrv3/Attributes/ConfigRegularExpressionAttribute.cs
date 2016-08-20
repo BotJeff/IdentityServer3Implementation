@@ -9,7 +9,8 @@ namespace IdSrv3.Attributes
 {
     public class ConfigRegularExpressionAttribute : RegularExpressionAttribute
     {
-        public ConfigRegularExpressionAttribute(string configKeyPattern) : base(ConfigurationManager.AppSettings[configKeyPattern])
+        public ConfigRegularExpressionAttribute(string configKeyPattern) 
+            : base(ConfigurationManager.AppSettings[configKeyPattern])
         {
             /*
              * This class is used for keeping the regex in the config file,

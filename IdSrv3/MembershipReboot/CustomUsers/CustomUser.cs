@@ -1,14 +1,7 @@
-﻿using BrockAllen.MembershipReboot;
-using BrockAllen.MembershipReboot.Ef;
+﻿using System.ComponentModel.DataAnnotations;
 using BrockAllen.MembershipReboot.Relational;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.ComponentModel.DataAnnotations;
-
-namespace IdSrv3.MembershipRoot.CustomUsers
+namespace IdSrv3.MembershipReboot.CustomUsers
 {
     public class CustomUser : RelationalUserAccount
     {
@@ -19,5 +12,10 @@ namespace IdSrv3.MembershipRoot.CustomUsers
         public virtual string LastName { get; set; }
 
         public virtual int? Age { get; set; }
+
+        /*
+         * NOTE: This class extends RelationalUserAccount, in essense it represents
+         * a "UserAccount" class such as the one found in IdentityServerEntities.
+         */
     }
 }

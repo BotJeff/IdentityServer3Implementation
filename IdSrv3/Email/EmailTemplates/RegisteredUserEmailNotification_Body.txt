@@ -1,0 +1,13 @@
+﻿<p>Hello, IT</p>
+
+<p><strong>Username:</strong> {Username} was registered on {CreatedDate}.<p>
+<ul>
+<li>First name:	{Firstname}</li>
+<li>Last name:	{Lastname}</li>
+<li>Email:	{Email}</li>
+</ul>
+<p>Please log into <a href="{IdentityManager}">Identity Manager</a> and assign the appropriate Roles and Claims to the new account.
+<br/>
+<br/>
+Thank you,
+</p>

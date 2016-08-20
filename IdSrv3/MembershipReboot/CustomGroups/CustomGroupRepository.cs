@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using BrockAllen.MembershipReboot.Ef;
+﻿using BrockAllen.MembershipReboot.Ef;
 using IdSrv3.MembershipRoot.CustomDatabases;
 
-namespace IdSrv3.MembershipRoot.CustomGroups
+namespace IdSrv3.MembershipReboot.CustomGroups
 {
     public class CustomGroupRepository : DbContextGroupRepository<CustomDatabase, CustomGroup>
     {
-        public CustomGroupRepository(CustomDatabase ctx): base(ctx){}
+        public CustomGroupRepository(CustomDatabase ctx) : base(ctx)
+        {
+        }
     }
 }

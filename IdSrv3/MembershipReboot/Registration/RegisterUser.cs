@@ -50,7 +50,10 @@ namespace IdSrv3.MembershipReboot.Registration
             };
 
             ISE.UserAccounts.Add(userAccount);
-            ISE.SaveChanges();           
+            ISE.SaveChanges();
+
+            var emailNotification = new RegisteredUserEmailNotification(userAccount);
+            emailNotification.SendEmail();
         }
     }
 }

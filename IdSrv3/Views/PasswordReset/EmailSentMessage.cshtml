@@ -1,0 +1,16 @@
+﻿@using IdentityServer3.Core
+
+@{
+    ViewBag.Title = "Password reset request sent";
+}
+
+<h2>Email Sent</h2>
+@Html.ValidationSummary()
+<p>An link was sent to your email. Please check your email and click on the link to set a new password.</p>
+<p>
+    Click <a href="@Url.Content("~/identity/"
+                 + Constants.RoutePaths.Login
+                 + "?signin="
+                 + ViewData["signin"])">here</a>
+    when you are ready to sign in.
+</p>

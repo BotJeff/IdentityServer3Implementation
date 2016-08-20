@@ -14,26 +14,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BrockAllen.MembershipReboot;
 using IdentityServer3.Core.Configuration;
 using IdentityServer3.Core.Services;
 using IdentityServer3.MembershipReboot;
-
-using IdSrv3.MembershipRoot.CustomUsers;
-using IdSrv3.MembershipRoot.CustomConfiguration;
-using IdSrv3.MembershipRoot.CustomDatabases;
-using IdSrv3.MembershipRoot.CustomGroups;
-using BrockAllen.MembershipReboot;
 using IdSrv3.App_Start;
+using IdSrv3.MembershipReboot.CustomDatabases;
+using IdSrv3.MembershipReboot.CustomUsers;
 
-namespace IdSrv3.MembershipReboot
+namespace IdSrv3.MembershipReboot.UserService
 {
     public static class CustomUserServiceExtensions
     {
+
         public static void ConfigureCustomUserService(this IdentityServerServiceFactory factory, string connString)
         {
             factory.UserService = new Registration<IUserService, CustomUserService>();

@@ -7,8 +7,8 @@ namespace IdSrv3.App_Start
     using System.Web;
     using BrockAllen.MembershipReboot;
     using BrockAllen.MembershipReboot.WebHost;
-    using MembershipRoot.CustomDatabases;
-    using MembershipRoot.CustomUsers;
+    using MembershipReboot.CustomDatabases;
+    using MembershipReboot.CustomUsers;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
     using Ninject;
     using Ninject.Web.Common;

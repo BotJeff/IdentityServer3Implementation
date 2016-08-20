@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using IdentityServer3.Core.Configuration;
-using IdentityServer3.EntityFramework;
 using IdentityServer3.Core.Models;
 using IdentityServer3.Core.Services;
-using IdentityServer3.Core.Services.InMemory;
+using IdentityServer3.EntityFramework;
+using IdSrv3.MembershipReboot.UserService;
 
 namespace IdSrv3.MembershipReboot
 {
@@ -19,7 +17,8 @@ namespace IdSrv3.MembershipReboot
                 ConnectionString = connString
             };
 
-            //code below is only used to populate the database with InMemory data, only if the database does not exist or is empty.
+            //code below is only used to populate the database with InMemory data,
+            //only if the database does not exist or is empty.
             ConfigureClients(Clients.Get(), options);
             ConfigureScopes(Scopes.Get(), options);
 

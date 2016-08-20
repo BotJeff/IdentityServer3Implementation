@@ -1,20 +1,14 @@
 ﻿using BrockAllen.MembershipReboot.Ef;
+using IdSrv3.MembershipReboot.CustomGroups;
+using IdSrv3.MembershipReboot.CustomUsers;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-using IdSrv3.MembershipRoot.CustomGroups;
-using IdSrv3.MembershipRoot.CustomUsers;
-
-namespace IdSrv3.MembershipRoot.CustomDatabases
+namespace IdSrv3.MembershipReboot.CustomDatabases
 {
     public class CustomDatabase : MembershipRebootDbContext<CustomUser, CustomGroup>
     {
-        /*
-         * 
-         */
-        public CustomDatabase(string connString) : base (connString){}
+        public CustomDatabase(string connString) : base(connString)
+        {
+            //Additional customization here.
+        }
     }
 }

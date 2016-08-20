@@ -1,8 +1,8 @@
 ﻿using IdentityManager.Configuration;
 using IdentityManager;
-using IdSrv3.MembershipRoot.CustomDatabases;
-using IdSrv3.MembershipRoot.CustomGroups;
-using IdSrv3.MembershipRoot.CustomUsers;
+using IdSrv3.MembershipReboot.CustomDatabases;
+using IdSrv3.MembershipReboot.CustomGroups;
+using IdSrv3.MembershipReboot.CustomUsers;
 
 using BrockAllen.MembershipReboot;
 using IdSrv3.App_Start;

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace IdSrv3.Extensions
 {
@@ -12,14 +9,14 @@ namespace IdSrv3.Extensions
             int StartYear = 2000;
             int StartCount = 1000;
 
-            if (year > StartYear)
+            if(year > StartYear)
             {
                 var diff = (year - StartYear) / 2;
                 var mul = (int)Math.Pow(2, diff);
                 int count = StartCount * mul;
-                // if we go negative, then we wrapped (expected in year ~2044). 
+                // if we go negative, then we wrapped (expected in year ~2044).
                 // Int32.Max is best we can do at this point
-                if (count < 0) count = Int32.MaxValue;
+                if(count < 0) count = Int32.MaxValue;
                 return count;
             }
             return StartCount;

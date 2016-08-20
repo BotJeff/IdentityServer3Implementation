@@ -1,0 +1,36 @@
+﻿<!-- Idenity Server 3 looks for a folder named template, in order to replace its
+    built in templates. This is used to customize the login/logout pages.
+    Pre qualify the respective files with an underscore to have Identity Server use the
+    custom templates instead of its built in templates.
+    
+    Complete tutorial: https://identityserver.github.io/Documentation/docsv2/advanced/DefaultViewService.html -->
+
+<!DOCTYPE html>
+<html ng-app="app" ng-csp ng-controller="LayoutCtrl">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{siteName}</title>
+    {stylesheets}
+
+    <link rel="stylesheet" type="text/css" href="../bundles/css/site" />
+    <link rel="stylesheet" type="text/css" href="../bundles/css/bootstrap" />
+</head>
+<body lang="en">
+    <div class="container masterHeader">
+        <!-- Your header code here. -->
+    </div>
+
+    <div class='idsrv3Content container page-{page}'
+         ng-cloak
+         style="width:100%;">
+        {pageContent}
+    </div>
+
+    <script id='modelJson' type='application/json'>
+        {model}
+    </script>
+    <script src="{applicationPath}/assets/scripts.2.5.0.js"></script>
+    {scripts}
+</body>
+</html>
