@@ -1,5 +1,5 @@
 ﻿using BrockAllen.MembershipReboot.Ef;
-using IdSrv3.MembershipRoot.CustomDatabases;
+using IdSrv3.MembershipReboot.CustomDatabases;
 
 namespace IdSrv3.MembershipReboot.CustomGroups
 {

@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IdentityModel.Claims;
-using System.Linq;
-using System.Web;
+using IdSrv3.Email;
 using IdSrv3.Entities;
-using IdSrv3.Models;
 using IdSrv3.Extensions;
+using IdSrv3.Models;
 
 namespace IdSrv3.MembershipReboot.Registration
 {

@@ -22,7 +22,7 @@ namespace IdSrv3
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = "Cookies",
-                LoginPath = new PathString("Home/Login")  //Creates a login path for IdentityManager
+                LoginPath = new PathString("/Home/Login")  //Creates a login path for IdentityManager
             });
 
             // IdentityManager

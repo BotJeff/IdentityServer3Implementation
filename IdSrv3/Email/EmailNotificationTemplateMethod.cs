@@ -5,7 +5,7 @@ using IdSrv3.Entities;
 
 namespace IdSrv3.Email
 {
-    public class EmailNotificationTemplateMethod
+    public abstract class EmailNotificationTemplateMethod
     {
         protected abstract UserAccount Account { get; }
         public virtual void SendEmail()

@@ -144,3 +144,7 @@ C:\Git\IdentityServer3\IdSrv3UnitTest\bin\Debug\no\BrockAllen.MembershipReboot.r
 C:\Git\IdentityServer3\IdSrv3UnitTest\bin\Debug\ru-ru\BrockAllen.MembershipReboot.resources.dll
 C:\Git\IdentityServer3\IdSrv3UnitTest\bin\Debug\sv\BrockAllen.MembershipReboot.resources.dll
 C:\Git\IdentityServer3\IdSrv3UnitTest\bin\Debug\zh-cn\BrockAllen.MembershipReboot.resources.dll
+C:\Git\IdentityServer3\IdSrv3UnitTest\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Git\IdentityServer3\IdSrv3UnitTest\bin\Debug\Microsoft.Owin.Security.dll
+C:\Git\IdentityServer3\IdSrv3UnitTest\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Git\IdentityServer3\IdSrv3UnitTest\bin\Debug\Microsoft.Owin.Security.xml
