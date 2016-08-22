@@ -9,6 +9,7 @@ namespace IdSrv3.IdentityManager
         public CustomIdentityManagerService(CustomUserAccountService userSvc, CustomGroupService groupSvc)
             : base(userSvc, groupSvc)
         {
+            //Custom code here.
         }
     }
 }

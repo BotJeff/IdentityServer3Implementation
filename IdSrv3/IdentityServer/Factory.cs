@@ -28,7 +28,7 @@ namespace IdSrv3.MembershipReboot
             factory.RegisterOperationalServices(options);
 
             //Configure Users
-            var userService = new LocalRegistrationUserService();
+            var userService = new LocalUserServiceBase();
             factory.UserService = new Registration<IUserService>(resolver => userService);
 
             return factory;

@@ -17,10 +17,8 @@ namespace IdSrv3DataMigrationTool.Migrations.Classes
          */
         public void MapClaims()
         {
-            Dictionary<Guid, Role> roles = idSrv2Entities.Roles.ToDictionary(k => k.RoleId);
-
-            Dictionary<Guid, UserAccount> userAccount;
-            userAccount = idSrv3Entities.UserAccounts.ToDictionary(key => key.ID);
+            var roles = idSrv2Entities.Roles.ToDictionary(k => k.RoleId);
+            var userAccount = idSrv3Entities.UserAccounts.ToDictionary(key => key.ID);
 
             foreach (UsersInRole role in idSrv2Entities.UsersInRoles)
             {

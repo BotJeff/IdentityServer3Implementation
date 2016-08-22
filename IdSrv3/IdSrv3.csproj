@@ -310,6 +310,7 @@
     </Compile>
     <Compile Include="Extensions\IntegerExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\UserAccountExtensions.cs" />
     <Compile Include="IdentityManager\CustomIdentityManagerService.cs" />
     <Compile Include="IdentityManager\MembershipRebootIdentityManagerServiceExtensions.cs" />
     <Compile Include="Entities\IdentityServerEntities.Context.cs">
@@ -330,7 +331,7 @@
     <Compile Include="IdentityServer\Clients.cs" />
     <Compile Include="MembershipReboot\UserService\CustomUserService.cs" />
     <Compile Include="IdentityServer\Factory.cs" />
-    <Compile Include="MembershipReboot\Registration\RegistrationUserService.cs" />
+    <Compile Include="IdentityServer\LocalUserServiceBase.cs" />
     <Compile Include="MembershipReboot\Registration\IRegisterUser.cs" />
     <Compile Include="MembershipReboot\Registration\RegisterUser.cs" />
     <Compile Include="IdentityServer\Scopes.cs" />
