@@ -6,7 +6,7 @@ using IdSrv3DataMigrationTool.Migrations.Classes;
 
 namespace IdSrv3DataMigrationTool.Crypto.Classes
 {
-    public class PasswordFormat : Migrate, IPasswordFormat
+    class PasswordFormat : Migrate, IPasswordFormat
     {
         public virtual void UpdateUserAccountPasswordFormat()
         {
@@ -17,9 +17,9 @@ namespace IdSrv3DataMigrationTool.Crypto.Classes
 
                 if (userAccount.Created < newPasswordDate && membershipDict.ContainsKey(userAccount.ID))
                 {
-                    string oldHashedPassword    = membershipDict[userAccount.ID].Password;
-                    string passwordSalt         = membershipDict[userAccount.ID].PasswordSalt;
-                    int year                    = membershipDict[userAccount.ID].LastPasswordChangedDate.Year;
+                    string oldHashedPassword = membershipDict[userAccount.ID].Password;
+                    string passwordSalt      = membershipDict[userAccount.ID].PasswordSalt;
+                    int year                 = membershipDict[userAccount.ID].LastPasswordChangedDate.Year;
 
                     userAccount.HashedPassword = GetNewPasswordFormat(oldHashedPassword, passwordSalt, year);
                 }

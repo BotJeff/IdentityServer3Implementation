@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using BrockAllen.MembershipReboot;
 using IdSrv3.AppSettings;
+using IdSrv3.Email;
 using IdSrv3.Extensions;
 using IdSrv3.MembershipReboot.CustomConfiguration;
 using IdSrv3.MembershipReboot.CustomUsers;
@@ -52,7 +53,7 @@ namespace IdSrv3.App_Start
                 "/identity/passwordresetwithkey" + "?key=");
 
             var delivery  = new SmtpMessageDelivery(true);
-            var formatter = new EmailMessageFormatter<CustomUser>(appinfo);
+            var formatter = new CustomEmailMessageFormatter(appinfo);
 
             return new EmailAccountEventsHandler<CustomUser>(formatter, delivery);
         }

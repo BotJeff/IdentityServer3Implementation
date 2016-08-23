@@ -1,9 +1,8 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using IdSrv3.Models;
-using IdSrv3.Attributes;
-using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using IdSrv3.Models;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace IdSrv3UnitTest.Models
 {
@@ -21,12 +20,12 @@ namespace IdSrv3UnitTest.Models
                 var results = new List<ValidationResult>();
                 //Assert.IsTrue(Validator.TryValidateProperty(model.Username, new ValidationContext(model, null, null) { MemberName="Username"}, results));
             }
-            catch (Exception e)
+            catch(Exception e)
             {
-
                 throw e;
             }
         }
+
         //[TestMethod]
         //public void UsernameAttributeTest()
         //{
@@ -37,7 +36,6 @@ namespace IdSrv3UnitTest.Models
         //    }
         //    catch (Exception e)
         //    {
-
         //        throw e;
         //    }
         //}
@@ -46,11 +44,9 @@ namespace IdSrv3UnitTest.Models
         //{
         //    try
         //    {
-                
         //    }
         //    catch (Exception e)
         //    {
-
         //        throw e;
         //    }
         //}

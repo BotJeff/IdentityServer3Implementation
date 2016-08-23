@@ -49,8 +49,10 @@ namespace IdSrv3.MembershipReboot.Registration
             ISE.UserAccounts.Add(userAccount);
             ISE.SaveChanges();
 
-            var emailNotification = new RegisteredUserEmailNotification(userAccount);
-            emailNotification.SendEmail();
+            var emailContent = new RegisteredUserEmailContent(userAccount);
+            var emailNotification = new EmailNotification(emailContent);
+
+            emailNotification.SendMessage();
         }
     }
 }

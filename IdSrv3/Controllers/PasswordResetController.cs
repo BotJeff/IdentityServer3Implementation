@@ -86,7 +86,6 @@ namespace IdSrv3.Controllers
         [HttpGet]
         public ActionResult CancelVerification(string key)
         {
-            //TODO: Finish Logic
             try
             {
                 var userService = UserAccountService.GetCustomUserAccountService();

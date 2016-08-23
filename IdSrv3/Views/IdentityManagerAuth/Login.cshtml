@@ -1,0 +1,42 @@
+﻿@model IdSrv3.Models.IdentityManagerLoginModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@using(Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    if(ViewData.ModelState["Password"] != null
+        && ViewData.ModelState["Password"].Errors
+                   .Any(x => x.ErrorMessage == "Password must meet requirements."))
+    {
+        <div class="passwordRequirements">
+            <h4>Password Requirements</h4>
+            <ul>
+                <li>1 or more uppercase letters</li>
+                <li>1 or more numbers</li>
+                <li>8 minimum characters</li>
+                <li>No special characters</li>
+            </ul>
+        </div>
+    }
+    else
+    {
+        <div class="passwordRequirements"></div>
+    }
+    <div class="form-group">
+        <label for="User Name">User Name</label>
+        @Html.TextBoxFor(x => x.Username, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="Password">Password</label>
+        @Html.PasswordFor(x => x.Password, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary">Register</button>
+    </div>
+}
