@@ -4,5 +4,6 @@ IdentityServer is a .NET/Katana-based framework and hostable component that allo
 
 See more details: https://github.com/IdentityServer/IdentityServer3
 
-This project provides a complete example solution that implements Identity Server 3, Identity Manager and Membershipreboot. For the most part existing examples are dispersed, making it non-intuitive how different moving pieces come together. This project attempts to bring together different moving pieces to show how they can be used to customize a full security suite.
+This project provides a complete example solution that implements Identity Server 3, Identity Manager and Membershipreboot. 
 
+This project was created because existing examples are dispersed, making it non-intuitive how different moving pieces come together. This project attempts to bring together different moving pieces to show how they can be used to customize a full security suite.
