@@ -27,6 +27,7 @@ namespace IdSrv3.Controllers
             {
                 try
                 {
+                    //Too much logic
                     var userService = UserAccountService.GetCustomUserAccountService();
                     var user = userService.GetByUsername(model.Username);
 

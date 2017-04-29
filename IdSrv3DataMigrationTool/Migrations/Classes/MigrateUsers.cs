@@ -14,6 +14,7 @@ namespace IdSrv3DataMigrationTool.Migrations.Classes
             {
                 idSrv3Entities.UserAccounts.Add( new UserAccount
                 {
+                    //move to it's own mapper class.
                     FirstName                   = string.Empty,
                     LastName                    = string.Empty,
                     Age                         = 0,

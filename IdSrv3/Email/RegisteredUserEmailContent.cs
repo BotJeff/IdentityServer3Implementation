@@ -14,19 +14,24 @@ namespace IdSrv3.Email
 
         public string Body()
         {
-            string body = EmailCommon.LoadTemplate(GetType().Name + "_Body");
-
-            body = body.Replace("{Username}", Account.Username);
-            body = body.Replace("{CreatedDate}", Account.Created.ToString());
-            body = body.Replace("{Firstname}", Account.FirstName);
-            body = body.Replace("{Lastname}", Account.LastName);
-            body = body.Replace("{Email}", Account.Email);
+            string body = EmailHelper.LoadTemplate(GetType().Name + "_Body");
+            body = PopulateBodyWithAccount(body);
 
             string baseUrl = GetBaseUrl();
 
             body = body.Replace("{IdentityManager}", baseUrl + "/admin/#/users/list");
             body += AppSettings.Settings.EmailSig;
 
+            return body;
+        }
+
+        private string PopulateBodyWithAccount(string body)
+        {
+            body = body.Replace("{Username}", Account.Username);
+            body = body.Replace("{CreatedDate}", Account.Created.ToString());
+            body = body.Replace("{Firstname}", Account.FirstName);
+            body = body.Replace("{Lastname}", Account.LastName);
+            body = body.Replace("{Email}", Account.Email);
             return body;
         }
 
@@ -45,7 +50,7 @@ namespace IdSrv3.Email
 
         public string Subject()
         {
-            return EmailCommon.LoadTemplate(GetType().Name + "_Subject");
+            return EmailHelper.LoadTemplate(GetType().Name + "_Subject");
         }
     }
 }

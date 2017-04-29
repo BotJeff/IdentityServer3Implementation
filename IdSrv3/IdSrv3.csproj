@@ -268,7 +268,7 @@
     <Compile Include="Crypto\IdSrv3Crypto\ICrypto.cs" />
     <Compile Include="Crypto\IdSrv3Crypto\System.Web.Helpers.Crypto.cs" />
     <Compile Include="Email\CustomEmailMessageFormatter.cs" />
-    <Compile Include="Email\EmailCommon.cs" />
+    <Compile Include="Email\EmailHelper.cs" />
     <Compile Include="Email\EmailNotification.cs" />
     <Compile Include="Email\IEmailContent.cs" />
     <Compile Include="Email\INotification.cs" />

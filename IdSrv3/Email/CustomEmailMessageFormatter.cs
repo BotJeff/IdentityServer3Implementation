@@ -13,12 +13,12 @@ namespace IdSrv3.Email
 
         protected override string LoadSubjectTemplate(UserAccountEvent<CustomUser> evt)
         {
-            return EmailCommon.LoadTemplate(CleanGenericName(evt.GetType()) + "_Subject");
+            return EmailHelper.LoadTemplate(CleanGenericName(evt.GetType()) + "_Subject");
         }
 
         protected override string LoadBodyTemplate(UserAccountEvent<CustomUser> evt)
         {
-            return EmailCommon.LoadTemplate(CleanGenericName(evt.GetType()) + "_Body");
+            return EmailHelper.LoadTemplate(CleanGenericName(evt.GetType()) + "_Body");
         }
 
         private string CleanGenericName(Type type)

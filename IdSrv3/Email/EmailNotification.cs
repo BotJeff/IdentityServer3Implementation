@@ -14,27 +14,37 @@ namespace IdSrv3.Email
 
         public virtual void SendMessage()
         {
-            MailMessage message = GetMessage();
+            MailMessage message = CreateMessage();
             SmtpClient client = new SmtpClient();
             client.Send(message);
         }
 
-        public virtual MailMessage GetMessage()
+        public virtual MailMessage CreateMessage()
         {
             string body = content.Body();
             string subject = content.Subject();
-            MailMessage message = new MailMessage
+            MailMessage message = InitMailMessage(body, subject);
+            AddEmailFields(message);
+
+            return message;
+        }
+
+        private static MailMessage InitMailMessage(string body, string subject)
+        {
+            return new MailMessage
             {
-                Subject     = subject,
-                Body        = body,
-                IsBodyHtml  = true,
-                From        = new MailAddress(Settings.FromEmail),
+                Subject = subject,
+                Body = body,
+                IsBodyHtml = true,
+                From = new MailAddress(Settings.FromEmail),
             };
+        }
+
+        private static void AddEmailFields(MailMessage message)
+        {
             message.To.Add(Settings.ToEmail);
             if(Settings.CcEmail != null) message.CC.Add(Settings.CcEmail);
             if(Settings.BccEmail != null) message.Bcc.Add(Settings.BccEmail);
-
-            return message;
         }
     }
 }

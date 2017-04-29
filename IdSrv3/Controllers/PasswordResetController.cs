@@ -24,6 +24,7 @@ namespace IdSrv3.Controllers
             {
                 try
                 {
+                    //too much logic
                     var userService = UserAccountService.GetCustomUserAccountService();
                     userService.ResetPassword(model.Email);
 
@@ -52,12 +53,13 @@ namespace IdSrv3.Controllers
 
         [Route("identity/passwordresetwithkey")]
         [HttpPost]
-        public ActionResult PasswordResetWithKey(string key, PasswordResetWithKeyModel model)
+        public ActionResult PasswordResetWithKey(string key, PasswordResetWithKeyModel model)      
         {
             if(ModelState.IsValid)
             {
                 try
                 {
+                    //too much logic
                     var userService = UserAccountService.GetCustomUserAccountService();
                     var user = userService.GetByVerificationKey(key);
 

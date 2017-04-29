@@ -6,6 +6,6 @@ namespace IdSrv3.Email
     {
         void SendMessage();
 
-        MailMessage GetMessage();
+        MailMessage CreateMessage();
     }
 }

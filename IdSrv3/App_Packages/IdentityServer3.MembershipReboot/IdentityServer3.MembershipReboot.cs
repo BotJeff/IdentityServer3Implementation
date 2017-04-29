@@ -14,18 +14,16 @@
  * limitations under the License.
  */
 
-using BrockAllen.MembershipReboot;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using IdentityModel.Extensions;
+using BrockAllen.MembershipReboot;
 using IdentityServer3.Core;
 using IdentityServer3.Core.Extensions;
 using IdentityServer3.Core.Models;
-using IdentityServer3.Core.Services;
 using IdentityServer3.Core.Services.Default;
 
 namespace IdentityServer3.MembershipReboot
@@ -34,12 +32,12 @@ namespace IdentityServer3.MembershipReboot
         where TAccount : UserAccount
     {
         public string DisplayNameClaimType { get; set; }
-        
+
         protected readonly UserAccountService<TAccount> userAccountService;
 
         public MembershipRebootUserService(UserAccountService<TAccount> userAccountService)
         {
-            if (userAccountService == null) throw new ArgumentNullException("userAccountService");
+            if(userAccountService == null) throw new ArgumentNullException("userAccountService");
 
             this.userAccountService = userAccountService;
         }
@@ -50,13 +48,13 @@ namespace IdentityServer3.MembershipReboot
             var requestedClaimTypes = ctx.RequestedClaimTypes;
 
             var acct = userAccountService.GetByID(subject.GetSubjectId().ToGuid());
-            if (acct == null)
+            if(acct == null)
             {
                 throw new ArgumentException("Invalid subject identifier");
             }
 
             var claims = GetClaimsFromAccount(acct);
-            if (requestedClaimTypes != null && requestedClaimTypes.Any())
+            if(requestedClaimTypes != null && requestedClaimTypes.Any())
             {
                 claims = claims.Where(x => requestedClaimTypes.Contains(x.Type));
             }
@@ -74,13 +72,13 @@ namespace IdentityServer3.MembershipReboot
                 new Claim(Constants.ClaimTypes.PreferredUserName, account.Username),
             };
 
-            if (!String.IsNullOrWhiteSpace(account.Email))
+            if(!String.IsNullOrWhiteSpace(account.Email))
             {
                 claims.Add(new Claim(Constants.ClaimTypes.Email, account.Email));
                 claims.Add(new Claim(Constants.ClaimTypes.EmailVerified, account.IsAccountVerified ? "true" : "false"));
             }
 
-            if (!String.IsNullOrWhiteSpace(account.MobilePhoneNumber))
+            if(!String.IsNullOrWhiteSpace(account.MobilePhoneNumber))
             {
                 claims.Add(new Claim(Constants.ClaimTypes.PhoneNumber, account.MobilePhoneNumber));
                 claims.Add(new Claim(Constants.ClaimTypes.PhoneNumberVerified, !String.IsNullOrWhiteSpace(account.MobilePhoneNumber) ? "true" : "false"));
@@ -103,7 +101,7 @@ namespace IdentityServer3.MembershipReboot
             var claims = GetClaimsFromAccount(acct);
 
             string name = null;
-            if (DisplayNameClaimType != null)
+            if(DisplayNameClaimType != null)
             {
                 name = acct.Claims.Where(x => x.Type == DisplayNameClaimType).Select(x => x.Value).FirstOrDefault();
             }
@@ -115,9 +113,9 @@ namespace IdentityServer3.MembershipReboot
 
         protected virtual Task<IEnumerable<Claim>> GetClaimsForAuthenticateResultAsync(TAccount account)
         {
-            return Task.FromResult((IEnumerable<Claim>)null);
+            return Task.FromResult((IEnumerable<Claim>) null);
         }
-        
+
         public override async Task AuthenticateLocalAsync(LocalAuthenticationContext ctx)
         {
             var username = ctx.UserName;
@@ -129,10 +127,10 @@ namespace IdentityServer3.MembershipReboot
             try
             {
                 TAccount account;
-                if (ValidateLocalCredentials(username, password, message, out account))
+                if(ValidateLocalCredentials(username, password, message, out account))
                 {
                     result = await PostAuthenticateLocalAsync(account, message);
-                    if (result == null)
+                    if(result == null)
                     {
                         var subject = GetSubjectForAccount(account);
                         var name = GetDisplayNameForAccount(account.ID);
@@ -143,13 +141,13 @@ namespace IdentityServer3.MembershipReboot
                 }
                 else
                 {
-                    if (account != null)
+                    if(account != null)
                     {
-                        if (!account.IsLoginAllowed)
+                        if(!account.IsLoginAllowed)
                         {
                             result = new AuthenticateResult("Account is not allowed to login");
                         }
-                        else if (account.IsAccountClosed)
+                        else if(account.IsAccountClosed)
                         {
                             result = new AuthenticateResult("Account is closed");
                         }
@@ -180,7 +178,7 @@ namespace IdentityServer3.MembershipReboot
             var externalUser = ctx.ExternalIdentity;
             var message = ctx.SignInMessage;
 
-            if (externalUser == null)
+            if(externalUser == null)
             {
                 throw new ArgumentNullException("externalUser");
             }
@@ -189,7 +187,7 @@ namespace IdentityServer3.MembershipReboot
             {
                 var tenant = String.IsNullOrWhiteSpace(message.Tenant) ? userAccountService.Configuration.DefaultTenant : message.Tenant;
                 var acct = this.userAccountService.GetByLinkedAccount(tenant, externalUser.Provider, externalUser.ProviderId);
-                if (acct == null)
+                if(acct == null)
                 {
                     ctx.AuthenticateResult = await ProcessNewExternalAccountAsync(tenant, externalUser.Provider, externalUser.ProviderId, externalUser.Claims);
                 }
@@ -198,7 +196,7 @@ namespace IdentityServer3.MembershipReboot
                     ctx.AuthenticateResult = await ProcessExistingExternalAccountAsync(acct.ID, externalUser.Provider, externalUser.ProviderId, externalUser.Claims);
                 }
             }
-            catch (ValidationException ex)
+            catch(ValidationException ex)
             {
                 ctx.AuthenticateResult = new AuthenticateResult(ex.Message);
             }
@@ -207,7 +205,7 @@ namespace IdentityServer3.MembershipReboot
         protected virtual async Task<AuthenticateResult> ProcessNewExternalAccountAsync(string tenant, string provider, string providerId, IEnumerable<Claim> claims)
         {
             var user = await TryGetExistingUserFromExternalProviderClaimsAsync(provider, claims);
-            if (user == null)
+            if(user == null)
             {
                 user = await InstantiateNewAccountFromExternalProviderAsync(provider, providerId, claims);
 
@@ -224,7 +222,7 @@ namespace IdentityServer3.MembershipReboot
             userAccountService.AddOrUpdateLinkedAccount(user, provider, providerId);
 
             var result = await AccountCreatedFromExternalProviderAsync(user.ID, provider, providerId, claims);
-            if (result != null) return result;
+            if(result != null) return result;
 
             return await SignInFromExternalProviderAsync(user.ID, provider);
         }
@@ -252,11 +250,11 @@ namespace IdentityServer3.MembershipReboot
         {
             var account = userAccountService.GetByID(accountID);
             var claims = await GetClaimsForAuthenticateResultAsync(account);
-            
+
             return new AuthenticateResult(
                 subject: accountID.ToString("D"),
                 name: GetDisplayNameForAccount(accountID),
-                claims:claims,
+                claims: claims,
                 identityProvider: provider,
                 authenticationMethod: Constants.AuthenticationMethods.External);
         }
@@ -275,15 +273,15 @@ namespace IdentityServer3.MembershipReboot
         protected virtual void SetAccountEmail(Guid accountID, ref IEnumerable<Claim> claims)
         {
             var email = claims.GetValue(Constants.ClaimTypes.Email);
-            if (email != null)
+            if(email != null)
             {
                 var acct = userAccountService.GetByID(accountID);
-                if (acct.Email == null)
+                if(acct.Email == null)
                 {
                     try
                     {
                         var email_verified = claims.GetValue(Constants.ClaimTypes.EmailVerified);
-                        if (email_verified != null && email_verified == "true")
+                        if(email_verified != null && email_verified == "true")
                         {
                             userAccountService.SetConfirmedEmail(acct.ID, email);
                         }
@@ -295,7 +293,7 @@ namespace IdentityServer3.MembershipReboot
                         var emailClaims = new string[] { Constants.ClaimTypes.Email, Constants.ClaimTypes.EmailVerified };
                         claims = claims.Where(x => !emailClaims.Contains(x.Type));
                     }
-                    catch (ValidationException)
+                    catch(ValidationException)
                     {
                         // presumably the email is already associated with another account
                         // so eat the validation exception and let the claim pass thru
@@ -307,15 +305,15 @@ namespace IdentityServer3.MembershipReboot
         protected virtual void SetAccountPhone(Guid accountID, ref IEnumerable<Claim> claims)
         {
             var phone = claims.GetValue(Constants.ClaimTypes.PhoneNumber);
-            if (phone != null)
+            if(phone != null)
             {
                 var acct = userAccountService.GetByID(accountID);
-                if (acct.MobilePhoneNumber == null)
+                if(acct.MobilePhoneNumber == null)
                 {
                     try
                     {
                         var phone_verified = claims.GetValue(Constants.ClaimTypes.PhoneNumberVerified);
-                        if (phone_verified != null && phone_verified == "true")
+                        if(phone_verified != null && phone_verified == "true")
                         {
                             userAccountService.SetConfirmedMobilePhone(acct.ID, phone);
                         }
@@ -327,7 +325,7 @@ namespace IdentityServer3.MembershipReboot
                         var phoneClaims = new string[] { Constants.ClaimTypes.PhoneNumber, Constants.ClaimTypes.PhoneNumberVerified };
                         claims = claims.Where(x => !phoneClaims.Contains(x.Type));
                     }
-                    catch (ValidationException)
+                    catch(ValidationException)
                     {
                         // presumably the phone is already associated with another account
                         // so eat the validation exception and let the claim pass thru
@@ -341,19 +339,19 @@ namespace IdentityServer3.MembershipReboot
             var subject = ctx.Subject;
 
             var acct = userAccountService.GetByID(subject.GetSubjectId().ToGuid());
-            
+
             ctx.IsActive = acct != null && !acct.IsAccountClosed && acct.IsLoginAllowed;
 
             return Task.FromResult(0);
         }
     }
-    
-    static class Extensions
+
+    internal static class Extensions
     {
         public static Guid ToGuid(this string s)
         {
             Guid g;
-            if (Guid.TryParse(s, out g))
+            if(Guid.TryParse(s, out g))
             {
                 return g;
             }

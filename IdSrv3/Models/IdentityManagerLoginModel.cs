@@ -5,6 +5,8 @@ namespace IdSrv3.Models
 {
     public class IdentityManagerLoginModel
     {
+        //NOTE: I Sussest moving any messages that might change to the config section.
+
         [Required(ErrorMessage = "You forgot to enter a user name.")]
         [ConfigRegularExpression("UsernameRegex", ErrorMessage =
                 "Username must be between 6-18 characters"

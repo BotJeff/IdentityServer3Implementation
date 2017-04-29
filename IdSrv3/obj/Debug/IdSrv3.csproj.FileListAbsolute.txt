@@ -323,3 +323,4 @@ C:\Git\IdentityServer3Implementation\IdSrv3\bin\sv\BrockAllen.MembershipReboot.r
 C:\Git\IdentityServer3Implementation\IdSrv3\bin\zh-cn\BrockAllen.MembershipReboot.resources.dll
 C:\Git\IdentityServer3Implementation\IdSrv3\obj\Debug\IdSrv3.dll
 C:\Git\IdentityServer3Implementation\IdSrv3\obj\Debug\IdSrv3.pdb
+C:\Git\IdentityServer3Implementation\IdSrv3\obj\Debug\IdSrv3.csprojResolveAssemblyReference.cache
